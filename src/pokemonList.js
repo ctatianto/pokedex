@@ -3,6 +3,7 @@ import axios from 'axios';
 import pokeImage from './imageSource';
 import Modal from './Modal';
 import './pokemonList.css'
+import loader from './assets/pokeball.gif'
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -87,7 +88,9 @@ const PokemonList = () => {
     }, 200); // Adjust the timeout as needed for your animation speed
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='loader'>
+      <img src={loader} alt="loading..." />
+  </div>;
 
   return (
     <div>

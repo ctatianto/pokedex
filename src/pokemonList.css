@@ -1,0 +1,112 @@
+/* PokemonList.css */
+
+/* Apply the chosen font */
+body {
+    font-family: 'Poppins', sans-serif; /* Use your selected font */
+    background-color: #f0f0f5; /* Soft background color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pokemon-list {
+    padding: 20px;
+    background-color: #fff; /* White background for the list */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pokemon-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pokemon-list li {
+    background: #ffffff; /* White background for each Pokemon card */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .pokemon-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .pokemon-list img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokemon-list h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em; /* Larger title font size */
+    margin-bottom: 20px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Consistent font for buttons */
+  }
+  
+  .pagination button:hover:not(.disabled) {
+    background-color: #45a049; /* Darker green */
+  }
+  
+  .pagination .disabled {
+    opacity: 0.5;
+  }
+  
+ /* Dropdown Styles */
+.dropdown {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dropdown label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #555; /* Darker text color */
+  }
+  
+  .dropdown select {
+    padding: 10px; /* Increased padding for a better feel */
+    border: 1px solid #4CAF50; /* Green border */
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for smooth effects */
+    font-size: 1em; /* Increase font size for better readability */
+    background-color: #f9f9f9; /* Light background color for the dropdown */
+    cursor: pointer; /* Pointer cursor for better user experience */
+  }
+  
+  .dropdown select:hover {
+    border-color: #45a049; /* Change border color on hover */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Shadow effect on hover */
+  }
+  
+  .dropdown select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #388e3c; /* Darker green when focused */
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5); /* Shadow effect on focus */
+  }
+  

@@ -1,0 +1,127 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  background-color: #ffcc00;
+  padding: 20px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.pokemon-list.visible {
+  opacity: 1;
+}
+
+.pokemon-list li {
+  list-style-type: none;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pokemon-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-list img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.pokemon-list ul li span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.pokemon-list div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.pokemon-list div span {
+  margin: 0 5px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 2px solid #007BFF; /* Blue border */
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.pagination .active button {
+  background-color: #ffc107; /* Yellow for active page */
+  color: black;
+  font-weight: bold;
+  border-color: #ffc107; /* Same color for the border */
+}
+
+.pagination .disabled button {
+  background-color: #f0f0f0; /* Light gray for disabled state */
+  color: #ccc;
+  cursor: not-allowed;
+  border: 2px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pokemon-list li {
+    width: 120px; /* Smaller cards on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-list {
+    padding: 10px; /* Reduce padding */
+  }
+  .pokemon-list li {
+    width: 100%; /* Full width on mobile */
+    margin: 5px 0; /* Vertical margin */
+  }
+}
